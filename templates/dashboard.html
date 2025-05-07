@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ data.title }}</title>
+</head>
+<body>
+    <h1>{{ data.title }}</h1>
+    <ul>
+        {% for key, value in data.metrics.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
