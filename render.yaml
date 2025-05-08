@@ -1,3 +1,6 @@
-build:
-  environment: python
-  buildCommand: "pip install -r requirements.txt"
+services:
+  - type: web
+    name: dashboard-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
